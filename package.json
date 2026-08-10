@@ -17,13 +17,18 @@
   ],
   "main": "./dist/extension.js",
   "activationEvents": [
-    "onCommand:extension.removeComments"
+    "onCommand:extension.removeComments",
+    "onCommand:extension.removeCommentsFolder"
   ],
   "contributes": {
     "commands": [
       {
         "command": "extension.removeComments",
         "title": "Remove All Comments (Frontend)"
+      },
+      {
+        "command": "extension.removeCommentsFolder",
+        "title": "Remove All Comments in Folder (Frontend)"
       }
     ],
     "keybindings": [
