@@ -3,6 +3,9 @@
   "displayName": "Remove Comments Frontend",
   "description": "Remove comments from frontend files (JS, TS, JSX, TSX, CSS).",
   "version": "0.0.2",
+  "bin": {
+    "remove-comments-frontend": "./cli.js"
+  },
   "icon": "icon.png",
   "publisher": "sototecnologia",
   "repository": {
@@ -17,13 +20,18 @@
   ],
   "main": "./dist/extension.js",
   "activationEvents": [
-    "onCommand:extension.removeComments"
+    "onCommand:extension.removeComments",
+    "onCommand:extension.removeCommentsFolder"
   ],
   "contributes": {
     "commands": [
       {
         "command": "extension.removeComments",
         "title": "Remove All Comments (Frontend)"
+      },
+      {
+        "command": "extension.removeCommentsFolder",
+        "title": "Remove All Comments in Folder (Frontend)"
       }
     ],
     "keybindings": [
@@ -37,6 +45,7 @@
   },
   "scripts": {
     "bundle": "webpack",
+    "cli": "node ./cli.js",
     "package": "vsce package",
     "publish": "vsce publish"
   },

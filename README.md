@@ -21,6 +21,12 @@ A **VS Code extension** that removes all comments from **frontend files**:
 
 All comments (`// ...`, `/* ... */`, CSS comments) will be removed safely.
 
+### Remove comments in an entire folder
+
+- Open Command Palette and run: **Remove All Comments in Folder (Frontend)**
+- Select the target folder
+- The extension will recursively process `.js`, `.ts`, `.jsx`, `.tsx`, and `.css` files
+
 ## 📦 Installation
 
 You can install it directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/)
@@ -29,6 +35,26 @@ or package it locally:
 ```bash
 vsce package
 code --install-extension remove-comments-frontend-0.0.1.vsix
+```
+
+## 🖥 CLI Usage
+
+Run on a file:
+
+```bash
+npx remove-comments-frontend ./src/app.tsx
+```
+
+Run recursively on a folder:
+
+```bash
+npx remove-comments-frontend ./src
+```
+
+Local script alternative:
+
+```bash
+npm run cli -- ./src
 ```
 
 ## 🛠 How it works
