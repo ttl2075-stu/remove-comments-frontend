@@ -37,6 +37,26 @@ vsce package
 code --install-extension remove-comments-frontend-0.0.1.vsix
 ```
 
+## 🖥 CLI Usage
+
+Run on a file:
+
+```bash
+npx remove-comments-frontend ./src/app.tsx
+```
+
+Run recursively on a folder:
+
+```bash
+npx remove-comments-frontend ./src
+```
+
+Local script alternative:
+
+```bash
+npm run cli -- ./src
+```
+
 ## 🛠 How it works
 
 - JavaScript / TypeScript / JSX / TSX: Uses the Babel parser to remove comments without breaking strings or regex literals.
